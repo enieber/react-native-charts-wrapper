@@ -42,6 +42,9 @@ public class LineDataExtract extends DataExtract<LineData, Entry> {
         if (BridgeUtils.validate(config, ReadableType.Number, "circleRadius")) {
             lineDataSet.setCircleRadius((float) config.getDouble("circleRadius"));
         }
+        if (BridgeUtils.validate(config, ReadableType.Boolean, "hasGradient")) {
+            lineDataSet.setDrawFilled(config.getBoolean("hasGradient"));
+        }
         if (BridgeUtils.validate(config, ReadableType.Boolean, "drawCircles")) {
             lineDataSet.setDrawCircles(config.getBoolean("drawCircles"));
         }
